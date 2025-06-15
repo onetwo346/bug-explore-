@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ladybug",
+    "name": "Ladybug",
+    "fact": "Ladybugs have 7 spots!",
+    "image": "assets/images/ladybug.png",
+    "sound": "assets/sounds/ladybug.mp3"
+  },
+  {
+    "id": "butterfly",
+    "name": "Butterfly",
+    "fact": "Butterflies taste with their feet!",
+    "image": "assets/images/butterfly.png",
+    "sound": "assets/sounds/butterfly.mp3"
+  },
+  {
+    "id": "bee",
+    "name": "Bee",
+    "fact": "Bees dance to communicate!",
+    "image": "assets/images/bee.png",
+    "sound": "assets/sounds/bee.mp3"
+  }
+]
