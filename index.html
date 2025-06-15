@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bug Explorer</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Explore a garden to find bugs, learn facts, and collect them in a virtual jar!">
+</head>
+<body>
+  <!-- Start Screen -->
+  <div id="start-screen" class="screen active">
+    <h1>Bug Explorer</h1>
+    <p>Tap leaves and rocks to find bugs, learn facts, and collect them!</p>
+    <button onclick="startGame()">Play</button>
+    <button onclick="showBugBook()">Bug Book</button>
+    <button onclick="showJar()">Bug Jar</button>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="screen">
+    <div id="garden">
+      <img src="assets/images/garden-bg.png" alt="Garden background" class="garden-bg">
+      <div class="interactive leaf" data-bug="ladybug" style="top: 20%; left: 10%;" role="button" tabindex="0" aria-label="Leaf hiding a bug"></div>
+      <div class="interactive rock" data-bug="butterfly" style="top: 50%; left: 60%;" role="button" tabindex="0" aria-label="Rock hiding a bug"></div>
+      <div class="interactive leaf" data-bug="bee" style="top: 70%; left: 30%;" role="button" tabindex="0" aria-label="Leaf hiding a bug"></div>
+    </div>
+    <button class="nav-btn" onclick="showStartScreen()">Back</button>
+    <button class="nav-btn" onclick="showSoundMatch()">Sound Match</button>
+  </div>
+
+  <!-- Fact Card -->
+  <div id="fact-card" class="modal">
+    <div class="modal-content">
+      <h2 id="bug-name"></h2>
+      <img id="bug-image" src="" alt="Bug image">
+      <p id="bug-fact"></p>
+      <button onclick="collectBug()">Collect in Jar</button>
+      <button onclick="closeFactCard()">Close</button>
+    </div>
+  </div>
+
+  <!-- Sound Match Mini-Game -->
+  <div id="sound-match" class="screen">
+    <h2>Match the Sound!</h2>
+    <button id="play-sound">Play Sound</button>
+    <div id="bug-options"></div>
+    <p id="sound-feedback"></p>
+    <button onclick="showGameScreen()">Back to Garden</button>
+  </div>
+
+  <!-- Bug Book -->
+  <div id="bug-book" class="screen">
+    <h2>Bug Book</h2>
+    <div id="book-content"></div>
+    <button onclick="showStartScreen()">Back</button>
+  </div>
+
+  <!-- Bug Jar -->
+  <div id="bug-jar" class="screen">
+    <h2>Bug Jar</h2>
+    <div id="jar-content"></div>
+    <p id="jar-count"></p>
+    <button onclick="showStartScreen()">Back</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
